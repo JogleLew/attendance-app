@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="button_pressed_color">#E5E5E5</color>
+    <color name="title_background">#fff3f4f5</color>
+    <color name="title_font">#ff000000</color>
+    <color name="content_background">#eef3f5</color>
+    <color name="content_font">#ff000000</color>
+    <color name="content_font_blue">#ff01aff4</color>
+    <color name="tab1">#ff01aff4</color>
+    <color name="tab2">#ff929292</color>
+    <color name="tab3">#ffffffff</color>
+    <color name="line">#ffdddddd</color>
+
+    <color name="focus_circle_bg">#F24949</color>
+    <color name="date_1">#F24949</color>
+    <color name="date_2">#40000000</color>
+    <color name="default_blue_color">#01aff4</color>
+</resources>

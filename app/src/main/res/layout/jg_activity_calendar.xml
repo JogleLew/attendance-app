@@ -1,0 +1,920 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#106bb9">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout14"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignBottom="@+id/setalarm"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#106bb9"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/cell_padding_bottom">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="222dp"
+                android:layout_height="45dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/left_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="6dp"
+                android:scaleType="center"
+                android:src="@drawable/tt_top_back" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout"
+        android:background="@color/content_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#106bb9"
+                android:tabStripEnabled="false"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#106bb9">
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/today_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="New Text"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/content_font_size" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.example.jogle.calendar.JGArcView
+                            android:id="@+id/arc_view_2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerInParent="true" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/cell_padding_bottom">
+
+                            <TextView
+                                android:id="@+id/textView34"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="签到率"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#ffce3a"
+                                android:textSize="20sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/signed_rate2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="N/A"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#ffce3a"
+                                    android:textSize="30sp" />
+
+                                <TextView
+                                    android:id="@+id/textView37"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="%"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#ffce3a"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/cell_padding_bottom">
+
+                        <TextView
+                            android:id="@+id/textView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下属共"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="#ffce3a"
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/total_people"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N/A"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="#ffce3a"
+                            android:textSize="@dimen/content_font_size" />
+
+                        <TextView
+                            android:id="@+id/textView27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="人"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="#ffce3a"
+                            android:textSize="@dimen/content_font_size" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView11"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/jg_clock" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView10"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/jg_timer" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout12"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/cell_padding_bottom">
+
+                            <TextView
+                                android:id="@+id/textView28"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="已签到"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#ffce3a"
+                                android:textSize="@dimen/content_font_size" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/signed_today"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="N/A"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#ffce3a"
+                                    android:textSize="38dp" />
+
+                                <TextView
+                                    android:id="@+id/textView30"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="人"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#ffce3a"
+                                    android:textSize="@dimen/content_font_size" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/cell_padding_bottom">
+
+                            <TextView
+                                android:id="@+id/textView31"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="未签到"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="#ffce3a"
+                                android:textSize="@dimen/content_font_size" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/unsigned_today"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="N/A"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#ffce3a"
+                                    android:textSize="38dp" />
+
+                                <TextView
+                                    android:id="@+id/textView33"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="人"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#ffce3a"
+                                    android:textSize="@dimen/content_font_size" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/signed_day_names"
+                        android:textColor="#ffce3a"
+                        android:text="已签到："
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="未签到："
+                        android:id="@+id/unsigned_day_names"
+                        android:textColor="#ffce3a"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/week_dates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="New Text"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/content_font_size" />
+
+                    <ListView
+                        android:id="@+id/peoplelistweek"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/imageButton5"
+                        android:background="#106bb9" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/month_dates"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="New Text"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/content_font_size" />
+
+                    <ListView
+                        android:id="@+id/peoplelistmonth"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/imageButton5"
+                        android:background="#106bb9" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+    <LinearLayout
+        android:id="@+id/my_statistics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#106bb9">
+
+            <com.example.jogle.calendar.JGArcView
+                android:id="@+id/arc_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/dot_blue" />
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="本月过去"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ffce3a"
+                        android:textSize="@dimen/content_font_size" />
+
+                    <TextView
+                        android:id="@+id/passed_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#f39c11"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView42"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="天"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ffce3a"
+                        android:textSize="@dimen/content_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/dot_blue" />
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="外勤签到"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ffce3a"
+                        android:textSize="@dimen/content_font_size" />
+
+                    <TextView
+                        android:id="@+id/out_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#f39c11"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="天"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ffce3a"
+                        android:textSize="@dimen/content_font_size" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/dot_blue" />
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="考勤签到"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ffce3a"
+                        android:textSize="@dimen/content_font_size" />
+
+                    <TextView
+                        android:id="@+id/in_days"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#f39c11"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/textView48"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="天"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ffce3a"
+                        android:textSize="@dimen/content_font_size" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical"
+                android:padding="@dimen/cell_padding_bottom">
+
+                <TextView
+                    android:id="@+id/textView49"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出勤率"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#ffce3a"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/signed_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ffce3a"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/textView51"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#ffce3a"
+                        android:textSize="@dimen/content_font_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/changer"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="#106bb9">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#217ac1">
+
+                <LinearLayout
+                    android:id="@+id/clickme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/click_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="提示:点击本区域展开"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/in_attendance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/cell_padding_left"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView5"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/dot_yellow" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/in_sign_in_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="暂无数据"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/content_font_size" />
+
+                                <TextView
+                                    android:id="@+id/textView21"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="考勤签到"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/content_font_size" />
+
+                                <TextView
+                                    android:id="@+id/in_sign_in_location"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toLeftOf="@id/textView21"
+                                    android:layout_toRightOf="@id/in_sign_in_time"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/content_font_size" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/in_sign_out_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="暂无数据"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/content_font_size" />
+
+                                <TextView
+                                    android:id="@+id/textView24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:text="考勤签退"
+                                    android:textAppearance="?android:attr/textAppearanceLarge"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/content_font_size" />
+
+                                <TextView
+                                    android:id="@+id/in_sign_out_location"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toLeftOf="@id/textView24"
+                                    android:layout_toRightOf="@id/in_sign_out_time"
+                                    android:textAppearance="?android:attr/textAppearanceMedium"
+                                    android:textColor="#ffffff"
+                                    android:textSize="@dimen/content_font_size" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/out_attendance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="@dimen/cell_padding_left"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/dot_green" />
+
+                        <LinearLayout
+                            android:id="@+id/out_sign_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/no_selection"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#106bb9"
+                android:gravity="center"
+                android:text="请在日历中选择一天，以查看详细信息。"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/title_font_size"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/cell_padding_bottom">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/calendar_left" />
+
+                <TextView
+                    android:id="@+id/show_year_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|left"
+                    android:paddingTop="1dip"
+                    android:text="2014"
+                    android:textColor="#80000000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|left"
+                    android:paddingTop="1dip"
+                    android:text="年 "
+                    android:textColor="#80000000"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/show_month_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dip"
+                    android:gravity="center"
+                    android:text="7月"
+                    android:textColor="#ff000000"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="6dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/calendar_right" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#eef3f5"
+            android:orientation="vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_alignParentTop="true"
+                android:background="#20000000"></View>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dip"
+                android:layout_marginBottom="2dip"
+                android:layout_marginTop="2dip">
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="日"
+                        android:textColor="@color/content_font_blue" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="一"
+                        android:textColor="@color/date_2" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="二"
+                        android:textColor="@color/date_2" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="三"
+                        android:textColor="@color/date_2" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="四"
+                        android:textColor="@color/date_2" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="五"
+                        android:textColor="@color/date_2" />
+
+                    <TextView
+                        style="@style/dateStyle"
+                        android:text="六"
+                        android:textColor="@color/content_font_blue" />
+                </TableRow>
+            </TableLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_alignParentTop="true"
+                android:background="#20000000"></View>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/contentPager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#fffffe">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#eef3f5"
+                android:paddingLeft="15dip"
+                android:paddingRight="10dip"></android.support.v4.view.ViewPager>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\Users\jogle\Desktop\Attendance\KLModule\src\main\assets"><file name="test.json" path="C:\Users\jogle\Desktop\Attendance\KLModule\src\main\assets\test.json"/><file name="testnew.json" path="C:\Users\jogle\Desktop\Attendance\KLModule\src\main\assets\testnew.json"/></source></dataSet><dataSet config="debug"><source path="C:\Users\jogle\Desktop\Attendance\KLModule\src\debug\assets"/></dataSet></merger>
